@@ -10,8 +10,8 @@
 
     <title>Weather Landing Page</title>
   </head>
-  <body>
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+  <body id="app">
+    <nav class="navbar navbar-expand-lg bg navbar-dark">
         <a class="navbar-brand" href="#">Latitude</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -40,6 +40,16 @@
         </div>
       </nav>
 
+    <div id="card" v-cloak>
+        <h1 class="heading">{{ dataTitle }}</h1>
+        <h1 class="vis">Visualisations</h1>
+        <img src="Resources/Fig1.png" alt="visualisation" class="rounded main-image">
+        <p class="para">"The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over 500 cities."</p>
+    </div>
+
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="script.js"></script>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -51,7 +61,7 @@
     <script src="script.js"></script>
 </body>
 <style>
-  .navbar {
+.navbar {
     width: 100%;
     padding: 0;
 }
@@ -60,6 +70,7 @@
     justify-content: space-between;
     display: flex;
     flex-wrap: wrap;
+    background-color: purple;
 }
 
 .navbar-nav {
@@ -76,7 +87,61 @@
 .data-block {
     width: 200px;
     height: 150px;
+    background-color: purple;
+}
+body {
+    background-color: #eee;
+}
+#card {
+    width: 1200px;
+    height: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7%;
+    justify-content: space-between;
     background-color: white;
 }
+.heading {
+    color: purple;
+    padding-left: 20px;
+    float: left;
+}
+.vis {
+    color: purple;
+    padding-right: 20%;
+    float: right;
+}
+[v-cloak] {
+    display: none;
+}
+.main-image {
+    margin-left: 1%;
+    margin-right: 75%;
+    margin-bottom: 25%;
+    float: left;
+    width: 30%;
+}
+p {
+    position: relative;
+    right: 7%;
+    top: 22%;
+    margin-right: 20%;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+p {
+  text-align: justify;
+  color: black;
+}
+</style>
 </style>
 </html>
