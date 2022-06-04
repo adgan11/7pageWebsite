@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="app">
+    <div v-cloak>
+        <h1 class="heading">{{ dataTitle }}</h1>
+        <h1 class="vis">Visualisations</h1>
+        <img src="Resources/Fig1.png" alt="visualisation" class="rounded main-image">
+        <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro odio non hic debitis a ratione sunt sit eius dignissimos, est tenetur vero autem optio ad? Similique modi esse ipsum voluptatibus.</p>
+    </div>
+
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="script.js"></script>
+</body>
+<style>
+    body {
+        background-color: black;
+    }
+    div {
+        width: 1200px;
+        height: 350px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10%;
+        justify-content: space-between;
+        background-color: #343a40;
+    }
+    .heading {
+        color: white;
+        padding-left: 20px;
+        float: left;
+    }
+    .vis {
+        color: white;
+        padding-right: 20px;
+        float: right;
+    }
+    [v-cloak] {
+        display: none;
+    }
+    .main-image {
+        margin-left: 2%;
+        margin-right: 75%;
+        margin-bottom: 25%;
+        float: left;
+        width: 20%;
+    }
+    p {
+        position: relative;
+        right: 7%;
+        top: 22%;
+        margin-right: 20%;
+    }
+</style>
+</html>
