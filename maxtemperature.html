@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Max Temperature</title>
+</head>
+
+<body id="app">
+    <nav class="navbar navbar-expand-lg bg navbar-dark">
+        <a class="navbar-brand" href="index.html">Latitude</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Plots
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="humidity.html">Humidity</a>
+                        <a class="dropdown-item" href="cloudiness.html">Cloudiness</a>
+                        <a class="dropdown-item" href="windspeed.html">Wind Speed</a>
+                    </div>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="comparision.html">Comparision<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="data.html">Data<span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="card" class="col-sm-16 col-md-12 col-lg-12">
+        <h1 class="heading">Max Temperature</h1>
+        <img src="Resources/Fig1.png" alt="visualisation" class="rounded main-image">
+        <hr>
+        <p class="para">As expected, the weather becomes significantly warmer as one approaches the equator (0 Degrees
+            Latitude). More interestingly, however, is the fact that the southern hemisphere tend to be warmer this time
+            of the year than the northern hemisphere. This may be due to the tilt of the earth at the time of the year
+            this data was gathered.</p>
+        <hr>
+        <h1 class="heading">Visualisations</h1>
+        <a href="#"><img src="Resources/Fig1.png" alt="visualisation" class="rounded vis-image"></a>
+        <a href="humidity.html"><img src="Resources/Fig2.png" alt="visualisation" class="rounded vis-image"></a>
+        <a href="cloudiness.html"><img src="Resources/Fig3.png" alt="visualisation" class="rounded vis-image"></a>
+        <a href="windspeed.html"><img src="Resources/Fig4.png" alt="visualisation" class="rounded vis-image"></a>
+    </div>
+
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="script.js"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+
+</body>
+<style>
+    nav {
+        background-color: purple;
+        border-radius: 5px;
+    }
+
+    .data-block {
+        width: 150%;
+        height: 100%;
+        background-color: purple;
+    }
+
+    body {
+        background-color: #eee;
+    }
+
+    #card {
+        width: 1200px;
+        height: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: auto;
+        justify-content: space-between;
+        background-color: white;
+        overflow: auto;
+        text-align: center;
+    }
+
+    .heading {
+        color: purple;
+    }
+
+    .main-image {
+        width: 60%;
+    }
+
+    .vis-image {
+        width: 35%;
+    }
+
+    p {
+        font-size: larger;
+        font-weight: bold;
+    }
+</style>
+
+</html>
